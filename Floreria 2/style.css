@@ -1,0 +1,170 @@
+/* Paleta de Colores:
+   - Fondo/Base: ('Fondo.png')
+   - Texto Principal: #333
+   - Acento Principal: #8B008B (Púrpura Elegante) o #A020F0 (Morado)
+   - Acento Rosa/Lila: #E0B0FF 
+   - Detalle Dorado/Bronce: #B8860B 
+*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/Fondo.png"); 
+    background-size: cover; 
+  background-attachment: fixed; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #a63ae6; /* Morado/Púrpura Oscuro */
+    font-weight: 700;
+}
+
+/* Encabezado y Navegación (Toques de Dorado/Rosa) */
+header {
+    background-color: #d58cfc; /* lila */
+    padding: 20px 0; 
+    text-align: center;
+}
+
+h1 {
+    color: negro;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #F5F5F5;
+    margin: 0 20px;
+    padding: 8px 15px;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav li a:hover, .btn-pedido {
+    color: #B8860B; /* Texto Dorado */
+    border-bottom: 2px solid lila; /* Línea Rosa Pálido */
+}
+
+/* Contenido Principal y Contenedor */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Estilo para el Aviso Importante */
+.aviso-importante {
+    background-color: #f3aacb; /* Rosa muy pálido */
+    border-left: 5px solid ; #E0B0FF 
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+/* Estilos de Ramos */
+.galeria-ramos {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ramo-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 45%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ramo-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Formulario */
+#formulario-pedido input:not([type="radio"]),
+#formulario-pedido select,
+#formulario-pedido textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    border-radius: 4px;
+}
+
+fieldset {
+    border: 1px solid #E0B0FF; /* Rosa Pálido */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+legend {
+    color: #f3aacb;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.btn-submit {
+    background-color: #B8860B; /* Dorado */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #DAA520; /* Dorado más brillante */
+}
+
+/* Aviso de Pago 50/50 */
+.aviso-pago {
+    border-left: 5px solid #E0B0FF; 
+    padding: 15px;
+    background-color: #f3aacb; 
+    margin-bottom: 25px;
+    font-style: italic;
+}
+.cotizacion-info {
+    font-weight: bold;
+    color: ##f3aacb;
+}
+
+/* Estilo para la información bancaria dinámica */
+#info-transferencia {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #B8860B; /* Borde Dorado */
+    background-color: #FFFACD; /* Color Limón Pálido para resaltar */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #333;
+    color: #F5F5F5;
+    margin-top: 50px;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florería "Don Ave"</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Florería "Don Ave"</h1>
+        <nav>
+            <ul>
+                <li><a href="#avisos">Avisos</a></li>
+                <li><a href="#info">Contacto</a></li>
+                <li><a href="#ramos">Colección</a></li>
+                <li><a href="#pedido" class="btn-pedido">Hacer Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="avisos" class="container aviso-importante">
+            <center><p>"Arreglos florales para toda ocasión"</p></center>
+            <center><p>Familia Cisneros Martínez</p></center>
+            <center><img src="img/Logo Don Ave.PNG" alt="Nuestra Floreria" class="Boutick"></center>
+            <h2>📢 Planifica tu Momento Especial</h2>
+            <p>Para garantizar la frescura y la exclusividad de tu diseño, todos los pedidos deben realizarse con un máximo de *dos semanas (14 días) de anticipación*.</p>
+        </section>
+
+        <hr>
+        
+        <section id="info" class="container">
+            <h2> Horarios y Ubicación </h2>
+            <div class="info-grid">
+                <div>
+                    <h3>Horarios de Atención:</h3>
+                    <ul>
+                        <li>Lunes a Domingo: *9:00 AM - 8:00 PM*</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Nuestra Ubicacion:</h3>
+                    <address>
+                        Dirección: 131 Avenida Vicente Guerrero Pte.
+                    </address>
+                    <img src="img/Don Ave.PNG" alt="Mapa de la Florería" class="mapa-img">
+                    <p><a href="https://maps.app.goo.gl/aaMqTAimWfx4qsCb6?g_st=aw" target="_blank" class="btn-mapa">Localizar en Mapa</a></p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="ramos" class="container">
+            <center><h2> Para Todo Tipo De Eventos</h2></center>
+            <center><h2> Y Màs...</h2></center>
+
+
+            <ul class="lista-temporada">
+
+                <center><img src="img/Bodas.png" alt="Ramo de Flores Pálidas"></center>
+
+                <center><img src="img/Bautizos.png" alt="Ramo de Flores Pálidas"></center>
+
+                <center><img src="img/XV años.png" alt="Ramo de Flores Pálidas"></center>
+
+                 <center><img src="img/Graduacion.png" alt="Ramo de Flores Pálidas"></center>
+            </ul>
+
+            <h3>Coleccion de referencias:</h3><div class="galeria-ramos">
+                
+                <article class="ramo-card">
+                    <h3>Bouquet con tonos rosa pastel</h3>
+                    <img src="img/2.png" alt="Ramo de Flores Pálidas">
+                    <p>Diseño elegante en tonos rosa. (Ref. $300)</p>
+                </article>
+
+                <article class="ramo-card">
+                    <h3>Arreglo de gerberas</h3>
+                    <img src="img/3.png" alt="Arreglo de Orquídeas">
+                    <p>Con tonos pastel y jarron. (Ref. $400)</p>
+                </article>
+
+                <article class="ramo-card">
+                    <h3>Ramo coquete</h3>
+                    <img src="img/4.png" alt="Arreglo de tres piezas">
+                    <p>.Rosas más un peluche (Ref. $1050)</p>
+                </article>
+
+                <article class="ramo-card">
+                    <h3>Corona</h3>
+                    <img src="img/5.png" alt="Arreglo de tres piezas">
+                    <p>.Flores frescas y coloridas(Ref. $2700)</p>
+                </article>
+
+                <article class="ramo-card">
+                    <h3>Caja sorpresa 'Propuesta'</h3>
+                    <img src="img/6.png" alt="Arreglo de tres piezas">
+                    <p>.Rosas naturales + Rosas eternas(Ref. $860)</p>
+                </article>
+            </div>
+
+            <section>
+
+
+            <div class="personalizacion-nota">
+                <h3> Personaliza tu Diseño</h3>
+                <p>Describe tu concepto, color y flores deseadas en el formulario de pedido.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="accesorios" class="container">
+            <h2> Detalles Adicionales y Regalos</h2>
+            <p>Añade un toque extra de lujo a tu pedido:</p>
+            <ul>
+                <li>Chocolates</li>
+                <li>Tarjetas Personalizadas</li>
+                <li>Peluche</li>
+                <li>Velas Aromáticas</li>
+                <li>Si desea algun otro, especifique en el formulario de pedido</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="pedido" class="container">
+            <h2> Haz tu Pedido</h2>
+
+            <div class="pago-informacion">
+                <h3>Información de Pago y Cotización:</h3>
+                <blockquote class="aviso-pago">
+                    <p>El pedido requiere el pago del *50% del precio total* como anticipo. El *50% restante* se liquida al recoger el producto.</p>
+                    <p class="cotizacion-info">Recibirás la cotización detallada y precio final en un mensaje de WhatsApp *dentro de unos minutos*.</p>
+                </blockquote>
+            </div>
+            
+            <form id="formulario-pedido" action="procesar_pedido.php" method="POST"> 
+                
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="Telefono">Numero De Telefono :</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Detalles del Pedido</legend>
+
+                    <label for="tipo_pedido">Selecciona Referencia o Personalización:</label>
+                    <select id="tipo_pedido" name="tipo_pedido" required>
+                        <option value="">-- Elige una opción --</option>
+                        <option value="Ramo Serenidad">Bouquet con tonos rosa pastel</option>
+                        <option value="Arreglo 'Corazon Romantico'">Arreglo de gerberas</option>
+                        <option value="Arreglo 'Mimos de Chocolate'">Ramo coquete</option>
+                        <option value="Arreglo 'Capricho dulce'">Corona</option>
+                        <option value="Ramo buchon">Caja sorpresa 'Propuesta'</option>
+                        <option value="personalizado">Pedido Personalizado (Detallar abajo)</option>
+                    </select>
+
+                    <label for="pedido_texto">Describe tu Pedido (Flores, colores, accesorios):</label>
+                    <textarea id="pedido_texto" name="pedido_texto" rows="6" required placeholder="Ej: Ramo personalizado de peonías rosas pálido y el accesorio de chocolates Suizos."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Forma de Pago (Anticipo 50%)</legend>
+                    <p>Elige tu método de pago inicial:</p>
+                    
+                    <input type="radio" id="transferencia" name="forma_pago" value="transferencia" required>
+                    <label for="transferencia">Transferencia Bancaria</label>
+                    <br>
+                    
+                    <input type="radio" id="efectivo" name="forma_pago" value="efectivo">
+                    <label for="efectivo">Efectivo (Al confirmar en tienda)</label>
+
+
+                    <div id="info-transferencia" style="display: none;">
+                        <p> *Datos Bancarios para Transferencia*</p>
+                        <p>
+                            Banco: Banco Elegante<br>
+                            Titular: Florería S.G..<br>
+                            No. Cuenta: 9876 5432 1098 7654<br>
+                            CLABE: 002123987654321099
+                        </p>
+                        <p class="nota-pago">⚠ Por favor, realiza la transferencia solo después de recibir la cotización por WhatsApp.</p>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Confirmar Pedido</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Florería "Don Ave".</p>
+        <p>¡Gracias por su preferencia!</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
