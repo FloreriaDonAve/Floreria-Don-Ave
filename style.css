@@ -11,9 +11,9 @@ body {
     padding: 0;
     background-image: url("img/Fondo.png"); 
     background-size: cover; 
-    background-attachment: fixed; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
     color: #333;
     line-height: 1.6;
 }
@@ -32,7 +32,7 @@ header {
 }
 
 h1 {
-    color: black; /* Corregido a inglés */
+    color: negro;
     margin: 0;
 }
 
@@ -41,14 +41,14 @@ nav ul {
     padding: 0;
     margin: 15px 0 0;
     display: flex;
-    flex-wrap: wrap; /* Corregido: añadido punto y coma */
+    flex-wrap:wrap
     justify-content: center;
 }
 
 nav li a {
     text-decoration: none;
     color: #F5F5F5;
-    margin: 5px 15px; /* Ajustado un poco para pantallas pequeñas */
+    margin: 0 20px;
     padding: 8px 15px;
     transition: all 0.3s;
     border-bottom: 2px solid transparent;
@@ -56,35 +56,33 @@ nav li a {
 
 nav li a:hover, .btn-pedido {
     color: #B8860B; /* Texto Dorado */
-    border-bottom: 2px solid #d58cfc; /* Línea Rosa Pálido/Lila */
+    border-bottom: 2px solid lila; /* Línea Rosa Pálido */
 }
 
-/* Contenido Principal y Contenedor RESPONSIVO */
+/* Contenido Principal y Contenedor */
 .container {
-    max-width: 1200px; /* Cambiado de 320px a 1200px para dar espacio */
-    width: 90%;        /* Ocupará el 90% de la pantalla en celulares */
-    margin: 30px auto;
-    padding: 20px;     /* Reducido un poco para móviles */
+    max-width: 320px;
+    margin: 50px auto;
+    padding: 30px;
     background-color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    box-sizing: border-box;
 }
 
 /* Estilo para el Aviso Importante */
 .aviso-importante {
     background-color: #f3aacb; /* Rosa muy pálido */
-    border-left: 5px solid #E0B0FF; /* Corregido el punto y coma */
+    border-left: 5px solid ; #E0B0FF 
     padding: 15px 20px;
     font-weight: 600;
 }
 
-/* Estilos de Ramos adaptables a celulares */
+/* Estilos de Ramos */
 .galeria-ramos {
     display: flex;
-    flex-wrap: wrap; /* Permite que los ramos se bajen si no caben */
-    justify-content: center; /* Centra los ramos en el celular */
-    gap: 20px;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    gap: 30px;
     margin-top: 30px;
 }
 
@@ -92,37 +90,18 @@ nav li a:hover, .btn-pedido {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
-    width: 100%;          /* En celular toma todo el ancho */
-    max-width: 280px;     /* Evita que se haga gigante en pantallas grandes */
+    width: 45%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box; /* Asegura que el padding no rompa el tamaño */
 }
 
 .ramo-card img {
     width: 100%;
-    height: auto;
+    max-width: 320px;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
-/* Lista de temporada (Las fotos grandes de arriba) */
-.lista-temporada {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-}
-
-.lista-temporada img {
-    width: 100%;
-    max-width: 350px; /* Tamaño ideal para que quepan bien en celular y laptop */
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Formulario Responsivo */
+/* Formulario */
 #formulario-pedido input:not([type="radio"]),
 #formulario-pedido select,
 #formulario-pedido textarea {
@@ -136,7 +115,7 @@ nav li a:hover, .btn-pedido {
 
 fieldset {
     border: 1px solid #E0B0FF; /* Rosa Pálido */
-    padding: 15px; /* Reducido un poco para celular */
+    padding: 25px;
     margin-bottom: 25px;
     border-radius: 8px;
 }
@@ -156,7 +135,6 @@ legend {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
-    width: 100%; /* Botón grande y fácil de presionar en celular */
 }
 
 .btn-submit:hover {
@@ -171,10 +149,9 @@ legend {
     margin-bottom: 25px;
     font-style: italic;
 }
-
 .cotizacion-info {
     font-weight: bold;
-    color: #f3aacb; /* Corregido el doble ## */
+    color: ##f3aacb;
 }
 
 /* Estilo para la información bancaria dinámica */
@@ -192,5 +169,3 @@ footer {
     background-color: #333;
     color: #F5F5F5;
     margin-top: 50px;
-}
-}
