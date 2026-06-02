@@ -61,7 +61,8 @@ nav li a:hover, .btn-pedido {
 
 /* Contenido Principal y Contenedor */
 .container {
-    max-width: 320px;
+    max-width: 900px;
+    width:90%
     margin: 50px auto;
     padding: 30px;
     background-color: white;
