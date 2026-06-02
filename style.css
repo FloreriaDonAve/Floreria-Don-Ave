@@ -41,7 +41,7 @@ nav ul {
     padding: 0;
     margin: 15px 0 0;
     display: flex;
-    flex-wrap:wrap
+    flex-wrap:wrap;
     justify-content: center;
 }
 
@@ -82,7 +82,7 @@ nav li a:hover, .btn-pedido {
 .galeria-ramos {
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-center;
     gap: 30px;
     margin-top: 30px;
 }
@@ -93,6 +93,7 @@ nav li a:hover, .btn-pedido {
     text-align: center;
     width: 45%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 30px auto;
 }
 
 .ramo-card img {
