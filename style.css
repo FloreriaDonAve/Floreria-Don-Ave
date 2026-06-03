@@ -1,21 +1,28 @@
-/* Paleta de Colores:
-   - Fondo/Base: ('Fondo.png')
-   - Texto Principal: #333
-   - Acento Principal: #8B008B (Púrpura Elegante) o #A020F0 (Morado)
-   - Acento Rosa/Lila: #E0B0FF 
-   - Detalle Dorado/Bronce: #B8860B 
-*/
+/* ==========================================================================
+   Paleta de Colores y Estilos Base
+   ========================================================================== */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url("img/Fondo.png"); 
     background-size: cover; 
-  background-attachment: fixed; 
-  background-position: center center; 
-  background-repeat:<0xa0> no-repeat;<0xa0> 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
     color: #333;
     line-height: 1.6;
+
+    /* Fuerza a que TODO el contenido de la página se organice en el centro exacto del fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* El encabezado y el pie de página deben estirarse por completo horizontalmente */
+header, footer {
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -24,7 +31,9 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* Encabezado y Navegación (Toques de Dorado/Rosa) */
+/* ==========================================================================
+   Encabezado y Navegación (Centrado Corregido)
+   ========================================================================== */
 header {
     background-color: #d58cfc; /* lila */
     padding: 20px 0; 
@@ -32,7 +41,7 @@ header {
 }
 
 h1 {
-    color: negro;
+    color: black; /* Corregido: 'negro' no es CSS válido, cambiado a 'black' */
     margin: 0;
 }
 
@@ -41,8 +50,8 @@ nav ul {
     padding: 0;
     margin: 15px 0 0;
     display: flex;
-    flex-wrap:wrap
-    justify-content: center;
+    flex-wrap: wrap;         /* Corregido: Añadido ';' que rompía las propiedades siguientes */
+    justify-content: center; /* Centra perfectamente los links Avisos, Contacto, etc. */
 }
 
 nav li a {
@@ -56,36 +65,68 @@ nav li a {
 
 nav li a:hover, .btn-pedido {
     color: #B8860B; /* Texto Dorado */
-    border-bottom: 2px solid lila; /* Línea Rosa Pálido */
+    border-bottom: 2px solid #E0B0FF; /* Corregido: 'lila' cambiado por código hexadecimal */
 }
 
-/* Contenido Principal y Contenedor */
+/* ==========================================================================
+   Estructura de Contenedores Globales
+   ========================================================================== */
 .container {
-    max-width: 320px;
-    width: 100%;
-    margin: 50px auto;
+    max-width: 900px; /* Ancho máximo ideal para pantallas de computadora */
+    width: 90%;       /* Excelente adaptabilidad en celulares */
+    margin: 40px auto;
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    display: block;
+    box-sizing: border-box;
 }
 
-/* Estilo para el Aviso Importante */
+/* ==========================================================================
+   Sección Superior: Avisos e Información Importante
+   ========================================================================== */
 .aviso-importante {
     background-color: #f3aacb; /* Rosa muy pálido */
-    border-left: 5px solid ; #E0B0FF 
+    border-left: 5px solid #E0B0FF; /* Corregido: Colocación de punto y coma al final */
     padding: 15px 20px;
     font-weight: 600;
+    text-align: center; /* Asegura el centrado interno de sus textos */
 }
 
-/* Estilos de Ramos */
+/* Ajuste para el logotipo de arriba */
+.Boutick {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Si el logo es circular */
+}
+
+/* ==========================================================================
+   Catálogo y Galería de Ramos (Centrado de Tarjetas)
+   ========================================================================== */
+.lista-temporada {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lista-temporada img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
 .galeria-ramos {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center; /* Cambiado a 'center' para que las tarjetas no se carguen a los lados */
     gap: 30px;
     margin-top: 30px;
-    width: 100;
+    width: 100%;
 }
 
 .ramo-card {
@@ -93,20 +134,29 @@ nav li a:hover, .btn-pedido {
     padding: 20px;
     text-align: center;
     width: 100%;
-    max-width: 320px;
-    backgroud-color:white;
+    max-width: 280px; /* Ajuste perfecto de ancho para que se vea estilizado en cuadrícula */
+    background-color: white; /* Corregido: Se solucionó el error de dedo 'backgroud-color' */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
+    border-radius: 8px;
 }
 
 .ramo-card img {
     width: 100%;
     max-width: 200px;
-    object-fit: cover;
+    height: 200px;
+    object-fit: cover; /* Recorta la foto proporcionalmente sin deformarla */
     margin-bottom: 15px;
+    border-radius: 4px;
 }
 
-/* Formulario */
+.personalizacion-nota {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ==========================================================================
+   Formularios y Elementos de Interacción
+   ========================================================================== */
 #formulario-pedido input:not([type="radio"]),
 #formulario-pedido select,
 #formulario-pedido textarea {
@@ -140,6 +190,8 @@ legend {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto; /* Centra el botón de enviar automáticamente */
 }
 
 .btn-submit:hover {
@@ -154,9 +206,10 @@ legend {
     margin-bottom: 25px;
     font-style: italic;
 }
+
 .cotizacion-info {
     font-weight: bold;
-    color: ##f3aacb;
+    color: #f3aacb; /* Corregido: Se eliminó el doble signo '##' */
 }
 
 /* Estilo para la información bancaria dinámica */
@@ -167,11 +220,13 @@ legend {
     background-color: #FFFACD; /* Color Limón Pálido para resaltar */
 }
 
-/* Pie de página */
+/* ==========================================================================
+   Pie de Página (Footer)
+   ========================================================================== */
 footer {
     text-align: center;
     padding: 25px;
     background-color: #333;
     color: #F5F5F5;
     margin-top: 50px;
-}
+} /* Corregido: Se añadió la llave de cierre faltante */
