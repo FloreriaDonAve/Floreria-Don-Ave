@@ -80,17 +80,21 @@ nav li a:hover, .btn-pedido {
 /* Estilos de Ramos */
 .galeria-ramos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 30px;
     margin-top: 30px;
+    width: 100;
 }
 
 .ramo-card {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
-    width: 45%;
+    width: 100%;
+    max-width: 320px;
+    backgroud-color:white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
 }
 
 .ramo-card img {
@@ -168,3 +172,4 @@ footer {
     background-color: #333;
     color: #F5F5F5;
     margin-top: 50px;
+}
