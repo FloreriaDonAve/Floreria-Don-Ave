@@ -110,9 +110,9 @@ nav li a:hover, .btn-pedido {
     padding: 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    aligin-items: center;
     gap: 20px;
+    margin: 20px 0;
 }
 
 .lista-temporada img {
